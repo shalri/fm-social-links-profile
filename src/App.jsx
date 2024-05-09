@@ -1,10 +1,10 @@
-import Main from "./components/Main";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
   return (
-    <>
-      <Main />
-    </>
+    <main className="flex flex-grow items-center justify-center">
+      <ProfileCard username="Jessica Randall" />
+    </main>
   );
 }
 

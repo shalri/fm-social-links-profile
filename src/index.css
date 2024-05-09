@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer {
-  .social-links {
+  .social-link {
     @apply rounded-lg bg-sl-grey py-[12px] font-bold transition-all duration-200 hover:bg-sl-primary hover:text-sl-off-black;
   }
 }
