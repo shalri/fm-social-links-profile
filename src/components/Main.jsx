@@ -1,37 +1,36 @@
 import avatar from "../assets/images/avatar-jessica.jpeg";
+import SocialLink from "./SocialLink";
+import { socialLinks } from "./socialLinks";
 
 const Main = () => {
   return (
-    <main className="flex justify-center items-center flex-grow">
-      <section className="bg-sl-dark-grey h-[580px] min-w-[330px] rounded-xl p-6 mx-6 text-center sm:max-w-[380px]">
+    <main className="flex flex-grow items-center justify-center">
+      <section className="mx-6 rounded-xl bg-sl-dark-grey p-6 text-center mobile:w-[390px] mobile:p-11">
         <img
           src={avatar}
           alt="profile pic"
-          className="rounded-full mx-auto"
+          className="mx-auto rounded-full mobile:mt-[6px]"
           width={90}
           height={90}
         />
         <div className="mt-6 leading-relaxed">
-          <h1 className="text-[26px] font-normal">Jessica Randall</h1>
-          <h3 className="text-sl-primary font-semibold">
+          <h1 className="text-[26px] font-regular">Jessica Randall</h1>
+          <h3 className="font-semibold text-sl-primary">
             London, United Kingdom
           </h3>
-          <p className="font-regular mt-[25px] opacity-80">
+          <p className="mt-[22px] font-regular opacity-80">
             &quot;Front-end developer and avid reader.&quot;
           </p>
         </div>
         <ul className="mt-6 flex flex-col gap-[17px]">
-          <li className="bg-sl-grey py-[12px] rounded-lg font-bold">GitHub</li>
-          <li className="bg-sl-grey py-[12px] rounded-lg font-bold">
-            Frontend Mentor
-          </li>
-          <li className="bg-sl-grey py-[12px] rounded-lg font-bold">
-            Linkedin
-          </li>
-          <li className="bg-sl-grey py-[12px] rounded-lg font-bold">Twitter</li>
-          <li className="bg-sl-grey py-[12px] rounded-lg font-bold">
-            Instagram
-          </li>
+          {socialLinks.map((link) => (
+            <SocialLink key={link.name} name={link.name} url={link.url} />
+          ))}
+          {/* <li className="social-links">GitHub</li> */}
+          {/* <li className="social-links">Frontend Mentor</li> */}
+          {/* <li className="social-links">Linkedin</li> */}
+          {/* <li className="social-links">Twitter</li> */}
+          {/* <li className="social-links">Instagram</li> */}
         </ul>
       </section>
     </main>
