@@ -1,9 +1,10 @@
+import avatar from "../assets/images/avatar-jessica.jpeg";
 export const users = [
   {
     username: "Jessica Randall",
     location: "London, United Kingdom",
     desc: "Front-end developer and avid reader.",
-    image: "src/assets/images/avatar-jessica.jpeg",
+    image: avatar,
     socialLinks: [
       {
         name: "Github",
@@ -31,7 +32,7 @@ export const users = [
     username: "Mockup Randall",
     location: "Mockup, United Kingdom",
     desc: "Mockup developer and avid reader",
-    image: "src/assets/images/favicon-32x32.png",
+    image: avatar, // create default avatar
     socialLinks: [
       {
         name: "Github",
